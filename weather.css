@@ -1,0 +1,107 @@
+img {
+  width: 80px;
+}
+form {
+  display: inline;
+  margin-top: 45px;
+  margin-right: -140px;
+  padding: 0;
+}
+input[type="text"] {
+  border-radius: 12px;
+  border: 1px solid #fff;
+  width: 615px;
+  height: 52px;
+  font-size: 24px;
+  padding-left: 20px;
+  outline: none;
+}
+
+input::placeholder {
+  color: #a7a9ad;
+  font-size: 24px;
+}
+
+input[type="submit"] {
+  border-radius: 12px;
+  background-color: #ff934f;
+  border: 1px solid #ff934f;
+  width: 120px;
+  height: 52px;
+  font-size: 24px;
+  color: #ffffff;
+}
+button {
+  border-radius: 12px;
+  background-color: #5a6276;
+  border: 1px solid #5a6276;
+  width: 120px;
+  height: 52px;
+  font-size: 20px;
+  color: #ffffff;
+  margin-left: 2px;
+}
+.temp-number,
+.city {
+  font-size: 60px;
+  font-weight: 400;
+  margin: 0;
+
+  line-height: 1;
+}
+.temp-number {
+  color: #ff934f;
+}
+.city {
+  color: #5a6276;
+}
+.temp-cf {
+  color: #5a6276;
+  font-size: 20px;
+  position: relative;
+  top: -30px;
+}
+.today {
+  font-size: 30px;
+  font-weight: normal;
+  color: #5a6276;
+  margin: 0;
+}
+.container {
+  width: 1000px;
+  height: 625px;
+  background: #e9ebee;
+  border-radius: 20px;
+  margin: 100px auto;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  line-height: 1;
+}
+.col {
+  text-align: center;
+  color: #ff934f;
+  font-size: 40px;
+  padding: 0;
+}
+.day {
+  color: #5a6276;
+}
+.upper {
+  padding: 55px 40px 0;
+  margin: 0 15px;
+}
+.middle {
+  padding: 80px 40px 60px;
+  margin: 0 15px;
+}
+.top-img {
+  width: 205px;
+  margin-top: 0px;
+}
+
+.bottom {
+  padding: 0px 40px 55px;
+}
+.temperature {
+  margin: 4px 0;
+}
