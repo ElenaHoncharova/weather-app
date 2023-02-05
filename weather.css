@@ -46,7 +46,6 @@ p {
 }
 .temp-number,
 .city {
-  font-size: 60px;
   font-weight: 400;
   margin: 0;
 
@@ -54,18 +53,19 @@ p {
 }
 .temp-number {
   color: #ff934f;
+  font-size: 80px;
+  line-height: 1;
 }
 .city {
   color: #5a6276;
+  font-size: 60px;
 }
 .temp-cf {
   color: #5a6276;
-  font-size: 20px;
-  position: relative;
-  top: -30px;
+  font-size: 14px;
 }
-.today {
-  font-size: 30px;
+.weather-details {
+  font-size: 16px;
   font-weight: normal;
   color: #5a6276;
   margin: 0;
@@ -106,5 +106,7 @@ p {
   padding: 0px 40px 55px;
 }
 .temperature {
-  margin: 4px 0;
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }
