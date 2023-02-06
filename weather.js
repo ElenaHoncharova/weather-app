@@ -1,5 +1,6 @@
 //Finall function. ❓Is it OK to put all together in one function?
 function showTemp(response) {
+  console.log(response);
   let currentTemp = document.querySelector("#current-temp");
   let headerCity = document.querySelector("#choosen-city");
   let skyElement = document.querySelector("#sky");
@@ -53,6 +54,12 @@ function showTemp(response) {
 
   fah.addEventListener("click", changeFah);
   cel.addEventListener("click", changeCel);
+
+  let bigIcon = document.querySelector("#big-icon");
+  bigIcon.setAttribute(
+    "src",
+    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 
 //When "Find" button is clicked
@@ -85,11 +92,11 @@ function getNavigation() {
 let button = document.querySelector("button");
 button.addEventListener("click", getNavigation);
 
-/*//Defaul city = Kyiv
+//Defaul city = Kyiv
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=kyiv&appid=ebef9ca4a8de66ed586fac628fade056&units=metric`;
 axios.get(apiUrl).then(showTemp);
 
-//🙀Bonus Feature
+/*//🙀Bonus Feature
 function changeFah(event) {
   event.preventDefault();
   return ${temp} * 1,8 + 32;
