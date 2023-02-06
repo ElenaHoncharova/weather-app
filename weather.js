@@ -52,13 +52,13 @@ function showTemp(response) {
   ];
   day = days[day];
   if (hour < 10 && minutes < 10) {
-    todayDay.innerHTML = `${day} 0${hour}:0${minutes}`;
+    todayDay.innerHTML = `Last updated: ${day} 0${hour}:0${minutes}`;
   } else if (hour >= 10 && minutes < 10) {
-    todayDay.innerHTML = `${day} ${hour}:0${minutes}`;
+    todayDay.innerHTML = `Last updated: ${day} ${hour}:0${minutes}`;
   } else if (hour < 10 && minutes >= 10) {
-    todayDay.innerHTML = `${day} 0${hour}:${minutes}`;
+    todayDay.innerHTML = `Last updated: ${day} 0${hour}:${minutes}`;
   } else {
-    todayDay.innerHTML = `${day} ${hour}:${minutes}`;
+    todayDay.innerHTML = `Last updated: ${day} ${hour}:${minutes}`;
   }
 }
 //🕵️‍♀️Feature #2
