@@ -5,13 +5,13 @@ let day = date.getDay();
 let hour = date.getHours();
 let minutes = date.getMinutes();
 let days = [
-  "SUNDAY",
-  "MONDAY",
-  "TUESDAY",
-  "WEDNESDAY",
-  "THURSDAY",
-  "FRIDAY",
-  "SATURDAY",
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
 ];
 day = days[day];
 if (hour < 10 && minutes < 10) {
