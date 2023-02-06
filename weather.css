@@ -132,8 +132,6 @@ a {
   padding: 0px 40px 55px;
 }
 .temperature {
-  margin: 0;
-  padding: 0;
   text-align: center;
 }
 .current-weather {
@@ -142,4 +140,11 @@ a {
 }
 .description:first-letter {
   text-transform: capitalize;
+}
+.col-10 {
+  padding: 0;
+}
+.col-2 {
+  margin: 0;
+  padding: 0;
 }

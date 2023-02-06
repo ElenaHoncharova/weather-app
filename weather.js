@@ -1,5 +1,5 @@
 //⏰Feature #1
-let date = new Date();
+/*let date = new Date();
 let todayDay = document.querySelector("#current-time");
 let day = date.getDay();
 let hour = date.getHours();
@@ -22,9 +22,10 @@ if (hour < 10 && minutes < 10) {
   todayDay.innerHTML = `${day} 0${hour}:${minutes}`;
 } else {
   todayDay.innerHTML = `${day} ${hour}:${minutes}`;
-}
+}*/
 
 function showTemp(response) {
+  console.log(response);
   let currentTemp = document.querySelector(".temp-number");
   let headerCity = document.querySelector("#choosen-city");
   let skyElement = document.querySelector("#sky");
@@ -32,7 +33,7 @@ function showTemp(response) {
   let windElement = document.querySelector("#wind");
   skyElement.innerHTML = response.data.weather[0].description;
   humidityElement.innerHTML = `Humidity: ${response.data.main.humidity}%`;
-  windElement.innerHTML = response.data.name;
+  windElement.innerHTML = `Wind: ${Math.round(response.data.wind.speed)} km/h`;
   headerCity.innerHTML = response.data.name;
   currentTemp.innerHTML = Math.round(response.data.main.temp);
 }
@@ -82,11 +83,3 @@ let fah = document.querySelector("#fah");
 let cel = document.querySelector("#cel");
 fah.addEventListener("click", changeFah);
 cel.addEventListener("click", changeCel);*/
-
-function showLog(response) {
-  console.log(response);
-}
-let apiKey = "ebef9ca4a8de66ed586fac628fade056";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=kyiv&appid=${apiKey}&units=metric`;
-
-axios.get(apiUrl).then(showLog);
