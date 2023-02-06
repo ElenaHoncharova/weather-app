@@ -1,29 +1,3 @@
-//⏰Feature #1
-/*let date = new Date(response.data.dt);
-let todayDay = document.querySelector("#current-time");
-let day = date.getDay();
-let hour = date.getHours();
-let minutes = date.getMinutes();
-let days = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
-day = days[day];
-if (hour < 10 && minutes < 10) {
-  todayDay.innerHTML = `${day} 0${hour}:0${minutes}`;
-} else if (hour >= 10 && minutes < 10) {
-  todayDay.innerHTML = `${day} ${hour}:0${minutes}`;
-} else if (hour < 10 && minutes >= 10) {
-  todayDay.innerHTML = `${day} 0${hour}:${minutes}`;
-} else {
-  todayDay.innerHTML = `${day} ${hour}:${minutes}`;
-}*/
-
 function showTemp(response) {
   console.log(response.data);
   let currentTemp = document.querySelector(".temp-number");
@@ -61,6 +35,7 @@ function showTemp(response) {
     todayDay.innerHTML = `Last updated: ${day} ${hour}:${minutes}`;
   }
 }
+
 //🕵️‍♀️Feature #2
 function changeCity(event) {
   event.preventDefault();
@@ -70,8 +45,6 @@ function changeCity(event) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=metric`;
 
   axios.get(apiUrl).then(showTemp);
-  /*let headerCity = document.querySelector("#choosen-city");
- headerCity.innerHTML = `${myCity.value}`;*/
 }
 
 let form = document.querySelector("form");
@@ -91,6 +64,10 @@ function getNavigation() {
 
 let button = document.querySelector("button");
 button.addEventListener("click", getNavigation);
+
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=kyiv&appid=ebef9ca4a8de66ed586fac628fade056&units=metric`;
+
+axios.get(apiUrl).then(showTemp);
 
 /*//🙀Bonus Feature
 function changeFah(event) {
