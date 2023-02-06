@@ -25,9 +25,14 @@ if (hour < 10 && minutes < 10) {
 }
 
 function showTemp(response) {
-  console.log(response);
   let currentTemp = document.querySelector(".temp-number");
   let headerCity = document.querySelector("#choosen-city");
+  let skyElement = document.querySelector("#sky");
+  let humidityElement = document.querySelector("#humidity");
+  let windElement = document.querySelector("#wind");
+  skyElement.innerHTML = response.data.name;
+  humidityElement.innerHTML = response.data.main.humidity;
+  windElement.innerHTML = response.data.name;
   headerCity.innerHTML = response.data.name;
   currentTemp.innerHTML = Math.round(response.data.main.temp);
 }
@@ -38,6 +43,7 @@ function changeCity(event) {
   let cityName = myCity.value;
   let apiKey = "ebef9ca4a8de66ed586fac628fade056";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=metric`;
+
   axios.get(apiUrl).then(showTemp);
   /*let headerCity = document.querySelector("#choosen-city");
  headerCity.innerHTML = `${myCity.value}`;*/
