@@ -153,3 +153,7 @@ a {
   color: #ff934f;
   font-weight: bold;
 }
+.active:hover {
+  color: #ff934f;
+  text-decoration: none;
+}

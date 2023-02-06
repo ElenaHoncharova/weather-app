@@ -39,18 +39,20 @@ function showTemp(response) {
     currentTemp.innerHTML = Math.round(
       (Math.round(response.data.main.temp) * 9) / 5 + 32
     );
+    cel.classList.remove("active");
+    fah.classList.add("active");
   }
   function changeCel(event) {
     event.preventDefault();
     currentTemp.innerHTML = Math.round(response.data.main.temp);
+    fah.classList.remove("active");
+    cel.classList.add("active");
   }
   let fah = document.querySelector("#fah");
   let cel = document.querySelector("#cel");
 
   fah.addEventListener("click", changeFah);
   cel.addEventListener("click", changeCel);
-
-  console.log(currentTemp);
 }
 
 //When "Find" button is clicked
