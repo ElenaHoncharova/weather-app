@@ -1,5 +1,5 @@
 //⏰Feature #1
-/*let date = new Date();
+/*let date = new Date(response.data.dt);
 let todayDay = document.querySelector("#current-time");
 let day = date.getDay();
 let hour = date.getHours();
@@ -25,7 +25,7 @@ if (hour < 10 && minutes < 10) {
 }*/
 
 function showTemp(response) {
-  console.log(response);
+  console.log(response.data);
   let currentTemp = document.querySelector(".temp-number");
   let headerCity = document.querySelector("#choosen-city");
   let skyElement = document.querySelector("#sky");
@@ -36,6 +36,30 @@ function showTemp(response) {
   windElement.innerHTML = `Wind: ${Math.round(response.data.wind.speed)} km/h`;
   headerCity.innerHTML = response.data.name;
   currentTemp.innerHTML = Math.round(response.data.main.temp);
+  let date = new Date(response.data.dt * 1000);
+  let todayDay = document.querySelector("#current-time");
+  let day = date.getDay();
+  let hour = date.getHours();
+  let minutes = date.getMinutes();
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  day = days[day];
+  if (hour < 10 && minutes < 10) {
+    todayDay.innerHTML = `${day} 0${hour}:0${minutes}`;
+  } else if (hour >= 10 && minutes < 10) {
+    todayDay.innerHTML = `${day} ${hour}:0${minutes}`;
+  } else if (hour < 10 && minutes >= 10) {
+    todayDay.innerHTML = `${day} 0${hour}:${minutes}`;
+  } else {
+    todayDay.innerHTML = `${day} ${hour}:${minutes}`;
+  }
 }
 //🕵️‍♀️Feature #2
 function changeCity(event) {
