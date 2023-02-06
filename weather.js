@@ -1,6 +1,6 @@
+//Finall function. ❓Is it OK to put all together in one function?
 function showTemp(response) {
-  console.log(response.data);
-  let currentTemp = document.querySelector(".temp-number");
+  let currentTemp = document.querySelector("#current-temp");
   let headerCity = document.querySelector("#choosen-city");
   let skyElement = document.querySelector("#sky");
   let humidityElement = document.querySelector("#humidity");
@@ -34,9 +34,26 @@ function showTemp(response) {
   } else {
     todayDay.innerHTML = `Last updated: ${day} ${hour}:${minutes}`;
   }
+  function changeFah(event) {
+    event.preventDefault();
+    currentTemp.innerHTML = Math.round(
+      (Math.round(response.data.main.temp) * 9) / 5 + 32
+    );
+  }
+  function changeCel(event) {
+    event.preventDefault();
+    currentTemp.innerHTML = Math.round(response.data.main.temp);
+  }
+  let fah = document.querySelector("#fah");
+  let cel = document.querySelector("#cel");
+
+  fah.addEventListener("click", changeFah);
+  cel.addEventListener("click", changeCel);
+
+  console.log(currentTemp);
 }
 
-//🕵️‍♀️Feature #2
+//When "Find" button is clicked
 function changeCity(event) {
   event.preventDefault();
   let myCity = document.querySelector("#enter-city");
@@ -50,6 +67,7 @@ function changeCity(event) {
 let form = document.querySelector("form");
 form.addEventListener("submit", changeCity);
 
+//When the "Current location" button is clicked
 function getCity(position) {
   let lat = position.coords.latitude;
   let lon = position.coords.longitude;
@@ -65,22 +83,25 @@ function getNavigation() {
 let button = document.querySelector("button");
 button.addEventListener("click", getNavigation);
 
+/*//Defaul city = Kyiv
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=kyiv&appid=ebef9ca4a8de66ed586fac628fade056&units=metric`;
-
 axios.get(apiUrl).then(showTemp);
 
-/*//🙀Bonus Feature
+//🙀Bonus Feature
 function changeFah(event) {
   event.preventDefault();
-  let temp = document.querySelector(".temp-number");
-  temp.innerHTML = "66";
+  return ${temp} * 1,8 + 32;
+  
+ 
 }
 function changeCel(event) {
   event.preventDefault();
-  let temp = document.querySelector(".temp-number");
-  temp.innerHTML = "19";
+ 
+ return ${temp}
 }
 let fah = document.querySelector("#fah");
 let cel = document.querySelector("#cel");
-fah.addEventListener("click", changeFah);
+let temp = Math.round(response.data.main.temp);
+temp.innerHTML = fah.addEventListener("click", changeFah) || cel.addEventListener("click", changeCel)
+fah.addEventListener("click", changeFah(temp));
 cel.addEventListener("click", changeCel);*/
