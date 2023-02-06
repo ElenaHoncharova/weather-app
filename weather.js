@@ -31,7 +31,7 @@ function showTemp(response) {
   let humidityElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#wind");
   skyElement.innerHTML = response.data.name;
-  humidityElement.innerHTML = response.data.main.humidity;
+  humidityElement.innerHTML = `Humidity: ${response.data.main.humidity}%`;
   windElement.innerHTML = response.data.name;
   headerCity.innerHTML = response.data.name;
   currentTemp.innerHTML = Math.round(response.data.main.temp);
@@ -82,3 +82,11 @@ let fah = document.querySelector("#fah");
 let cel = document.querySelector("#cel");
 fah.addEventListener("click", changeFah);
 cel.addEventListener("click", changeCel);*/
+
+function showLog(response) {
+  console.log(response);
+}
+let apiKey = "ebef9ca4a8de66ed586fac628fade056";
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=kyiv&appid=${apiKey}&units=metric`;
+
+axios.get(apiUrl).then(showLog);

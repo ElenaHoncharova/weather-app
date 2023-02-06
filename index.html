@@ -27,88 +27,92 @@
     <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
   </head>
   <body>
-    <div class="container">
-      <div class="row upper">
-        <div class="col-10">
-          <form>
-            <input
-              type="text"
-              id="enter-city"
-              placeholder="Enter a city"
-              autofocus
-              on
-            />
-            <input type="submit" value="Find" />
-          </form>
+    <div class="project">
+      <div class="container">
+        <div class="row upper">
+          <div class="col-10">
+            <form>
+              <input
+                type="text"
+                id="enter-city"
+                placeholder="Enter a city"
+                autofocus
+                on
+              />
+              <input type="submit" value="Find" />
+            </form>
+          </div>
+          <div class="col-2">
+            <button>Current location</button>
+          </div>
         </div>
-        <div class="col-2">
-          <button>Current location</button>
-        </div>
-      </div>
-      <div class="row middle">
-        <div class="col-3">
-          <img class="top-img" src="images/clouds.png" alt="clouds" />
-        </div>
-        <div class="col-9 data">
-          <div class="city" id="choosen-city">Kyiv</div>
-          <div class="row current-weather">
-            <div class="col-2 temperature">
-              <div class="temp-number">19</div>
-              <div class="temp-cf">
-                <a href="#" id="cel">°C </a> | <a href="#" id="fah"> °F</a>
+        <div class="row middle">
+          <div class="col-3">
+            <img class="top-img" src="images/clouds.png" alt="clouds" />
+          </div>
+          <div class="col-9 data">
+            <div class="city" id="choosen-city">Kyiv</div>
+            <div class="row current-weather">
+              <div class="col-2 temperature">
+                <div class="temp-number">19</div>
+                <div class="temp-cf">
+                  <a href="#" id="cel">°C </a> | <a href="#" id="fah"> °F</a>
+                </div>
+              </div>
+              <div class="col-6 weather-details">
+                <ul>
+                  <li class="today" id="current-time"></li>
+                  <li id="sky">Partly cloudy</li>
+                  <li id="humidity">Humidity: 54%</li>
+                  <li id="wind">Wind: 12km/h</li>
+                </ul>
               </div>
             </div>
-            <div class="col-6 weather-details">
-              <ul>
-                <li class="today" id="current-time"></li>
-                <li id="sky">Partly cloudy</li>
-                <li id="humidity">Humidity: 54%</li>
-                <li id="wind">Wind: 12km/h</li>
-              </ul>
+          </div>
+        </div>
+        <div class="bottom">
+          <div class="row">
+            <div class="col day">TUE</div>
+            <div class="col day">WED</div>
+            <div class="col day">THU</div>
+            <div class="col day">FRI</div>
+            <div class="col day">SAT</div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <img src="images/partly-cloudy.png" alt="" />
+            </div>
+            <div class="col">
+              <img src="images/Rain.png" alt="" />
+            </div>
+            <div class="col">
+              <img src="images/Snow.png" alt="" />
+            </div>
+            <div class="col">
+              <img src="images/sunny.png" alt="" />
+            </div>
+            <div class="col">
+              <img src="images/thunder.png" alt="" />
             </div>
           </div>
+          <div class="row">
+            <div class="col">10°</div>
+            <div class="col">11°</div>
+            <div class="col">7°</div>
+            <div class="col">5°</div>
+            <div class="col">4°</div>
+          </div>
         </div>
       </div>
-      <div class="bottom">
-        <div class="row">
-          <div class="col day">TUE</div>
-          <div class="col day">WED</div>
-          <div class="col day">THU</div>
-          <div class="col day">FRI</div>
-          <div class="col day">SAT</div>
-        </div>
-        <div class="row">
-          <div class="col">
-            <img src="images/partly-cloudy.png" alt="" />
-          </div>
-          <div class="col">
-            <img src="images/Rain.png" alt="" />
-          </div>
-          <div class="col">
-            <img src="images/Snow.png" alt="" />
-          </div>
-          <div class="col">
-            <img src="images/sunny.png" alt="" />
-          </div>
-          <div class="col">
-            <img src="images/thunder.png" alt="" />
-          </div>
-        </div>
-        <div class="row">
-          <div class="col">10°</div>
-          <div class="col">11°</div>
-          <div class="col">7°</div>
-          <div class="col">5°</div>
-          <div class="col">4°</div>
-        </div>
-      </div>
+      <p>
+        <a
+          href="https://github.com/ElenaHoncharova/weather-app"
+          class="bottom-link"
+          >Open-sourse code</a
+        >
+        by Elena
+      </p>
     </div>
-    <p>
-      <a href="https://github.com/ElenaHoncharova/weather-app"
-        >Open-sourse code</a
-      >
-      by Elena
-    </p>
     <script src="weather.js"></script>
   </body>
 </html>
