@@ -30,7 +30,7 @@ function showTemp(response) {
   let skyElement = document.querySelector("#sky");
   let humidityElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#wind");
-  skyElement.innerHTML = response.data.name;
+  skyElement.innerHTML = response.data.weather[0].description;
   humidityElement.innerHTML = `Humidity: ${response.data.main.humidity}%`;
   windElement.innerHTML = response.data.name;
   headerCity.innerHTML = response.data.name;

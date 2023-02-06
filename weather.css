@@ -140,3 +140,6 @@ a {
   margin: 0;
   padding: 0;
 }
+.description:first-letter {
+  text-transform: capitalize;
+}
