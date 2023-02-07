@@ -64,6 +64,7 @@ function showTemp(response) {
 
 //When "Find" button is clicked
 function changeCity(event) {
+  debugger;
   event.preventDefault();
   let myCity = document.querySelector("#enter-city");
   let cityName = myCity.value;
@@ -78,10 +79,12 @@ form.addEventListener("submit", changeCity);
 
 //When the "Current location" button is clicked
 function getCity(position) {
+  debugger;
   let lat = position.coords.latitude;
   let lon = position.coords.longitude;
   let apiKey = "ebef9ca4a8de66ed586fac628fade056";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+  console.log(apiUrl);
   axios.get(apiUrl).then(showTemp);
 }
 

@@ -126,6 +126,7 @@ a {
 .top-img {
   width: 205px;
   margin-top: 0px;
+  margin-bottom: -48px;
 }
 
 .bottom {
