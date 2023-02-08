@@ -153,6 +153,7 @@ a {
 .active {
   color: #ff934f;
   font-weight: bold;
+  cursor: default;
 }
 .active:hover {
   color: #ff934f;
