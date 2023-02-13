@@ -28,86 +28,46 @@
   </head>
   <body>
     <div class="project">
-      <div class="container">
-        <div class="row upper">
-          <div class="col-10">
-            <form>
-              <input
-                type="text"
-                id="enter-city"
-                placeholder="Enter a city"
-                autofocus
-                on
-              />
-              <input type="submit" value="Find" />
-            </form>
-          </div>
-          <div class="col-2">
-            <button>Current location</button>
-          </div>
-        </div>
-        <div class="row middle">
-          <div class="col-3">
-            <img
-              class="top-img"
-              id="big-icon"
-              src="images/clouds.png"
-              alt="clouds"
+      <div class="container-background">
+        <div class="container">
+          <form>
+            <input
+              type="text"
+              id="enter-city"
+              placeholder="Enter a city"
+              autofocus
+              on
             />
-          </div>
-          <div class="col-9 data">
-            <div class="city" id="choosen-city"></div>
-            <div class="row current-weather">
-              <div class="col-2 temperature">
+            <input type="submit" value="Find" />
+          </form>
+
+          <button>Current city</button>
+
+          <h1 class="city" id="choosen-city"></h1>
+          <div class="row middle">
+            <div class="col-4">
+              <img class="top-img" id="big-icon" src="" alt="" />
+            </div>
+            <div class="col-4 data">
+              <div class="temperature">
                 <div class="temp-number" id="current-temp"></div>
                 <div class="temp-cf">
-                  <a href="#" class="active" id="cel">°C </a> <b>|</b>
+                  <a href="#" class="active" id="cel">°C </a>
                   <a href="#" id="fah"> °F</a>
                 </div>
               </div>
-              <div class="col-6 weather-details">
-                <ul>
-                  <li class="description" id="sky"></li>
-                  <li id="humidity"></li>
-                  <li id="wind"></li>
-                  <li class="today" id="current-time"></li>
-                </ul>
-              </div>
+            </div>
+            <div class="col-4 weather-details">
+              <ul>
+                <li class="today" id="current-time"></li>
+                <li class="description" id="sky"></li>
+                <li id="humidity"></li>
+                <li id="wind"></li>
+              </ul>
             </div>
           </div>
-        </div>
-        <div class="bottom">
-          <div class="row">
-            <div class="col day">TUE</div>
-            <div class="col day">WED</div>
-            <div class="col day">THU</div>
-            <div class="col day">FRI</div>
-            <div class="col day">SAT</div>
-          </div>
-          <div class="row">
-            <div class="col">
-              <img src="images/partly-cloudy.png" alt="" />
-            </div>
-            <div class="col">
-              <img src="images/Rain.png" alt="" />
-            </div>
-            <div class="col">
-              <img src="images/Snow.png" alt="" />
-            </div>
-            <div class="col">
-              <img src="images/sunny.png" alt="" />
-            </div>
-            <div class="col">
-              <img src="images/thunder.png" alt="" />
-            </div>
-          </div>
-          <div class="row">
-            <div class="col">10°</div>
-            <div class="col">11°</div>
-            <div class="col">7°</div>
-            <div class="col">5°</div>
-            <div class="col">4°</div>
-          </div>
+
+          <div class="bottom" id="forecast"></div>
         </div>
       </div>
       <p>
