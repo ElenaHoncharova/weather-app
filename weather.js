@@ -162,22 +162,3 @@ button.addEventListener("click", getNavigation);
 //Defaul city = Kyiv
 let apiUrl1 = `https://api.openweathermap.org/data/2.5/weather?q=kyiv&appid=ebef9ca4a8de66ed586fac628fade056&units=metric`;
 axios.get(apiUrl1).then(showTemp);
-
-/*//🙀Bonus Feature
-function changeFah(event) {
-  event.preventDefault();
-  return ${temp} * 1,8 + 32;
-  
- 
-}
-function changeCel(event) {
-  event.preventDefault();
- 
- return ${temp}
-}
-let fah = document.querySelector("#fah");
-let cel = document.querySelector("#cel");
-let temp = Math.round(response.data.main.temp);
-temp.innerHTML = fah.addEventListener("click", changeFah) || cel.addEventListener("click", changeCel)
-fah.addEventListener("click", changeFah(temp));
-cel.addEventListener("click", changeCel);*/
