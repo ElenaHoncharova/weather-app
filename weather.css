@@ -100,7 +100,7 @@ a {
   margin: 20px auto;
   width: 700px;
 }
-.container-background {
+.container {
   width: 700px;
   height: 450px;
   background: #e9ebee;
@@ -110,8 +110,13 @@ a {
   font-family: "Poppins", sans-serif;
   line-height: 1;
 }
-.container {
+.container-content {
   padding: 30px 54px;
+}
+@media (min-width: 576px) {
+  .container {
+    max-width: 100%;
+  }
 }
 .forecast-day {
   color: #5a6276;
