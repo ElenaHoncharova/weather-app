@@ -92,7 +92,7 @@ function showTemp(response) {
   ];
   month = months[month];
   day = days[day];
-  todayDay.innerHTML = `${day}, <b style="color:#FF934F;">${number}</b> ${month}`;
+  todayDay.innerHTML = `${day}<br />${month} <b style="color:#FF934F;">${number}</b>`;
   /*if (hour < 10 && minutes < 10) {
     todayDay.innerHTML = `${day} 0${hour}:0${minutes}`;
   } else if (hour >= 10 && minutes < 10) {
