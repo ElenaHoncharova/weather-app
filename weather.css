@@ -78,7 +78,7 @@ a {
 }
 .temp-number {
   color: #ff934f;
-  font-size: 76px;
+  font-size: 112px;
   line-height: 0.89;
 }
 
@@ -88,7 +88,7 @@ a {
   font-family: Syncopate;
 }
 .weather-details {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: normal;
   color: #5a6276;
   margin: 0;
@@ -139,7 +139,7 @@ a {
   margin: 0;
 }
 .top-img {
-  width: 50%;
+  width: 70%;
   margin: auto;
   padding: 0;
   display: block;
@@ -312,5 +312,8 @@ a {
   }
   .middle {
     padding: 0 0 50px;
+  }
+  .temp-number {
+    font-size: 76px;
   }
 }
