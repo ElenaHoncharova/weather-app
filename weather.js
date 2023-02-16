@@ -46,6 +46,10 @@ function displayForecast(response) {
 
 //Main function
 function showTemp(response) {
+  let fah = document.querySelector("#fah");
+  let cel = document.querySelector("#cel");
+  cel.classList.add("active");
+  fah.classList.remove("active");
   let currentTemp = document.querySelector("#current-temp");
   let headerCity = document.querySelector("#choosen-city");
   let skyElement = document.querySelector("#sky");
@@ -117,8 +121,8 @@ function showTemp(response) {
     fah.classList.remove("active");
     cel.classList.add("active");
   }
-  let fah = document.querySelector("#fah");
-  let cel = document.querySelector("#cel");
+  /*let fah = document.querySelector("#fah");
+  let cel = document.querySelector("#cel");*/
 
   fah.addEventListener("click", changeFah);
   cel.addEventListener("click", changeCel);
