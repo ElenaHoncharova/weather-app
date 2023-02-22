@@ -28,8 +28,7 @@ function displayForecast(response) {
      <div class="forecast-day">${formatDay(forecastDay.dt)}</div>
     <img 
     src="ForecastImages/${forecastDay.weather[0].icon}.png" 
-    alt="${forecastDay.weather[0].description}" 
-    width="40px"
+    alt="${forecastDay.weather[0].description}"
     />
     <div class="forecast-temp">
    <span class="forecast-temp-max">${Math.round(forecastDay.temp.max)}°
