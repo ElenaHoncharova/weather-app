@@ -27,59 +27,49 @@
     <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
   </head>
   <body>
-    <div class="project">
-      <div class="container">
-        <div class="container-content">
-          <form>
-            <input
-              type="text"
-              id="enter-city"
-              placeholder="Enter a city"
-              autofocus
-              on
-            />
-            <input type="submit" value="Find" />
-          </form>
+    <div class="container">
+      <div class="container-content">
+        <form>
+          <input
+            type="text"
+            id="enter-city"
+            placeholder="Enter a city"
+            autofocus
+            on
+          />
+          <input type="submit" value="Find" />
+        </form>
 
-          <button>Current city</button>
+        <button>Current city</button>
 
-          <h1 class="city" id="choosen-city"></h1>
-          <div class="row middle">
-            <div class="col-12 col-md-4 data">
-              <div class="temperature">
-                <div class="temp-number" id="current-temp"></div>
-                <div class="temp-cf">
-                  <a href="#" class="active" id="cel">°C </a>
-                  <a href="#" id="fah"> °F</a>
-                </div>
+        <h1 class="city" id="choosen-city"></h1>
+        <div class="row middle">
+          <div class="col-12 col-md-4 data">
+            <div class="temperature">
+              <div class="temp-number" id="current-temp"></div>
+              <div class="temp-cf">
+                <a href="#" class="active" id="cel">°C </a>
+                <a href="#" id="fah"> °F</a>
               </div>
             </div>
-            <div class="col-6 order-md-first col-md-4 parent-top-img">
-              <img class="top-img" id="big-icon" src="" alt="" />
-            </div>
-            <div class="col-6 col-md-4 weather-details">
-              <ul>
-                <li class="today" id="current-time"></li>
-                <li class="description" id="sky"></li>
-                <li id="humidity"></li>
-                <li id="wind"></li>
-              </ul>
-            </div>
           </div>
-
-          <div class="bottom" id="forecast"></div>
+          <div class="col-6 order-md-first col-md-4 parent-top-img">
+            <img class="top-img" id="big-icon" src="" alt="" />
+          </div>
+          <div class="col-6 col-md-4 weather-details">
+            <ul>
+              <li class="today" id="current-time"></li>
+              <li class="description" id="sky"></li>
+              <li id="humidity"></li>
+              <li id="wind"></li>
+            </ul>
+          </div>
         </div>
+
+        <div class="bottom" id="forecast"></div>
       </div>
-      <p>
-        <a
-          href="https://github.com/ElenaHoncharova/weather-app"
-          class="bottom-link"
-          target="_blank"
-          >Open-sourse code</a
-        >
-        by Elena
-      </p>
     </div>
+
     <script src="weather.js"></script>
   </body>
 </html>
