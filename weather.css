@@ -230,7 +230,7 @@ For another screens
     height: 40px;
     font-size: 18px;
     color: #ffffff;
-    margin: 8px 0 0 0;
+    margin: 4% 0 0 0;
     padding: 0;
   }
   button {
@@ -354,7 +354,7 @@ For another screens
     height: 40px;
     font-size: 18px;
     color: #ffffff;
-    margin: 8px 0 0 0;
+    margin: 4% 0 0 0;
     padding: 0;
   }
   button {
@@ -387,7 +387,7 @@ For another screens
     text-align: center;
   }
   .col-2 img {
-    margin: 2% auto;
+    margin: 8% auto;
     padding: 0;
     display: block;
     width: 70%;
