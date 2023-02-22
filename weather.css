@@ -184,6 +184,11 @@ a {
 .col-4 {
   padding: 0;
 }
+
+/*!!!
+For another screens
+!!!*/
+
 @media (min-width: 576px) {
   .container {
     max-width: 100%;
@@ -280,27 +285,12 @@ a {
     padding: 0;
     line-height: 1.3;
     text-align: center;
-    position: relative;
-    left: 150px;
-    top: 10px;
   }
   .top-img {
     width: 80%;
     margin: auto;
     padding: 0;
     display: block;
-    position: relative;
-    top: 110px;
-  }
-
-  .row {
-    margin: 0;
-  }
-
-  h1 {
-    margin: 30px 0;
-    padding: 0;
-    font-size: 40px;
   }
   .col-4 {
     margin: 0;
@@ -312,9 +302,17 @@ a {
     text-align: center;
     margin: 0;
     padding: 0;
-    position: relative;
-    right: 70px;
   }
+  .row {
+    margin: 0;
+  }
+
+  h1 {
+    margin: 30px 0;
+    padding: 0;
+    font-size: 40px;
+  }
+
   .middle {
     padding: 0 0 50px;
   }
