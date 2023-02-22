@@ -370,7 +370,7 @@ For another screens
   }
   .forecast-day {
     color: #5a6276;
-    font-size: 16px;
+    font-size: 18px;
     text-align: center;
   }
   .col-2 {
@@ -383,14 +383,14 @@ For another screens
     display: none;
   }
   .forecast-temp {
-    font-size: 16px;
+    font-size: 18px;
     text-align: center;
   }
   .col-2 img {
-    margin: 6px auto;
+    margin: 2% auto;
     padding: 0;
     display: block;
-    width: 40px;
+    width: 70%;
   }
   .weather-details {
     font-size: 16px;
